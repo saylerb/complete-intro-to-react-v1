@@ -11,15 +11,16 @@ var MyTitle = React.createClass({
   }
 })
 
-// Components are like instances, that throw elements onto the page
-// can only have a single top-level element (a div
+
+var MyTitleFact = React.createFactory(MyTitle) // we won't this with JSX
+var ce = React.createElement
 
 var MyFirstComponent = (
   div(null,
+    // All these next three lines are equivalent:
+    MyTitleFact(null),  
     React.createElement(MyTitle, null),
-    React.createElement(MyTitle, null),
-    React.createElement(MyTitle, null),
-    React.createElement(MyTitle, null)
+    ce(MyTitle, null)
   )
 )
 
