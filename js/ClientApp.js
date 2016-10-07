@@ -25,4 +25,3 @@ var MyFirstComponent = (
 )
 
 ReactDOM.render(MyFirstComponent, document.getElementById('app'))
-
